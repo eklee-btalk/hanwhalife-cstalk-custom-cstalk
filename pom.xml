@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>spectra.attic.btalk.cstalk</groupId>
+    <artifactId>hanwhalife-cstalk-custom-cstalk</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>hanwhalife-custom-faqagent-aop</module>
+        <module>hanwhalife-custom-faqagent-messaging</module>
+    </modules>
+
+    <parent>
+        <groupId>spectra.attic.btalk</groupId>
+        <artifactId>btalk-parent</artifactId>
+        <version>14.0.0</version>
+    </parent>
+
+    <properties>
+        <revision>14.0.0-hanwhalife</revision>
+        <cstalk.version>14.0.0</cstalk.version>
+        <skipServiceTests>false</skipServiceTests>
+        <skipDocTests>false</skipDocTests>
+        <sonar.cpd.exclusions>**/domain/**, **/sdo/**, **/model/**, **/store/**</sonar.cpd.exclusions>
+        <nexus.docker.url>p-registry-nexus.spectra.co.kr/repository/attic</nexus.docker.url>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>nexus-public</id>
+            <name>nexus-public</name>
+            <url>https://nexus.spectra.co.kr/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>project-nexus-public</id>
+            <name>project-nexus-public</name>
+            <url>https://project-nexus.spectra.co.kr/repository/maven-public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>project-nexus-release</id>
+            <name>release</name>
+            <url>https://project-nexus.spectra.co.kr/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>project-nexus-snapshot</id>
+            <name>snapshot</name>
+            <url>https://project-nexus.spectra.co.kr/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>

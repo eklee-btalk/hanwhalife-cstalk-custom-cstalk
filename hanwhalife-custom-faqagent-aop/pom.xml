@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>spectra.attic.btalk.cstalk</groupId>
+        <artifactId>hanwhalife-cstalk-custom-cstalk</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>hanwhalife-custom-faqagent-aop</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>spectra.attic.btalk.cstalk</groupId>
+            <artifactId>hanwhalife-custom-faqagent-messaging</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>spectra.attic.btalk.cstalk</groupId>
+            <artifactId>faqagent-service</artifactId>
+            <version>${cstalk.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>spectra.attic.coreasset.share</groupId>
+            <artifactId>share-messaging</artifactId>
+            <version>${share.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>spectra.attic.btalk.share</groupId>
+            <artifactId>btalk-share-test-spring</artifactId>
+            <version>${btalk.share.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
